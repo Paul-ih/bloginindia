@@ -1,0 +1,24 @@
+<h1>{{articles}}</h1>
+<p>You are now entering the index</p>
+
+<div class="container">
+<h1 class="mb-4">Blog Articles</h1>
+<a href="/articles/new" class="btn btn-success">New Article</a>
+
+{{articles}}
+
+{{#each article}}
+<p>1</p>
+    
+{{/each}}
+
+{{#each article}}
+<div class="card mt-4">
+    <p>{{this.title}}</p>
+    <p>{{this.date}}</p>
+    <p>{{this.description}}</p>
+    <p>{{this.image}}</p>
+    </div>
+{{/each}}
+
+</div>
