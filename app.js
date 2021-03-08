@@ -28,8 +28,8 @@ app.use('/users', usersRouter);
 app.use(express.urlencoded({ extended: false}))
 
 // Mongoose Connect
-mongoose.connect('mongodb://localhost/bloginindia', 
-{ useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect('mongodb://localhost/bloginindia', 
+// { useNewUrlParser: true, useUnifiedTopology: true });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

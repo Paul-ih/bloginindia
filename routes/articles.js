@@ -3,9 +3,6 @@ const router = express.Router()
 const Article = require('./../models/article.hbs')
 
 
-
-
-
 router.get('/:id', async (req, res, next) => {
     let article = await Article.findById(req.params.id)
     if (article == null) res.redirect('/')
