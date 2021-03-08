@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;500;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;500;700&display=swap');
 
 * {
   margin: 0 0 0 0;
@@ -11,7 +11,7 @@ body {
   background-color: bisque;
   /* background-image: url("/images/flaticon-in/svg/ashoka-chakra.svg");
   background-size: contain;  */
-}
+/* }
 
 a {
   color: green;
@@ -178,7 +178,7 @@ footer {
   background: #9A031E;
   color: #E36414;
   /* position: absolute; */ 
-  bottom: 0;
+  /* bottom: 0;
   width: 100%;
   padding-top: 50px;
   height: 50px;
@@ -190,3 +190,5 @@ a:hover {
   color: #E36414;
   text-decoration: none;
 }
+
+/*
