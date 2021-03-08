@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;500;700&display=swap');
+
+* {
+  margin: 0 0 0 0;
+}
+
+
+body {
+  font-family: 'Hind Guntur', sans-serif;
+  color: #460B2F;
+  background-color: bisque;
+  /* background-image: url("/images/flaticon-in/svg/ashoka-chakra.svg");
+  background-size: contain;  */
+}
+
+a {
+  color: green;
+}
+
+h1 {
+  font-size: 1.5em;
+
+}
+
+#navbar {
+  background-color: #E36414;
+  color: #FB8B24;
+  font-variant: small-caps;
+  place-items: center;
+}
+
+
+#navbar a:link,
+#navbar a:visited {
+  color: #460B2F;
+}
+
+#navbar a:hover {
+  color: green
+}
+
+.container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, .75rem);
+  padding-left: var(--bs-gutter-x, .75rem);
+  margin-right: auto;
+  margin-left: auto
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #198754;
+  border-color: #198754
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: grey;
+  border-color: #grey
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: grey;
+  border-color: #grey
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #157347;
+  border-color: #146c43
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .25rem
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem
+}
+
+.card-title {
+  margin-bottom: .5rem
+}
+
+.card-subtitle {
+  margin-top: -.25rem;
+  margin-bottom: .5rem;
+  color: #6c757d;
+}
+
+.postimage {
+  margin-bottom: 0
+}
+
+.card-text:last-child {
+  margin-bottom: 0
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.mb-2 {
+  margin-bottom: .5rem
+}
+
+
+
+
+.form-text {
+  margin-top: .25rem;
+  font-size: .875em;
+  color: #6c757d
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .form-control {
+      transition: none
+  }
+}
+
+
+
+footer {
+  place-items: center;
+  background: #9A031E;
+  color: #E36414;
+  /* position: absolute; */ 
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
+  height: 50px;
+}
+
+footer a:link,
+a:visited,
+a:hover {
+  color: #E36414;
+  text-decoration: none;
+}
