@@ -96,3 +96,9 @@ a:hover {
     overflow: hidden; */
 }
 
+/* Forms CSS */
+
+.confirmation button {
+    border: solid black; 
+    text-align: center;
+}
