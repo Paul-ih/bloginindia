@@ -4,7 +4,14 @@ var router = express.Router();
 
 
 /* GET home page. */
+
+
 router.get('/', (req, res, next) => {
+  res.render('index')
+  })
+
+
+router.get('/all', (req, res, next) => {
   let articles = [{
     title: `Test Article`, 
     date: new Date(),
@@ -19,17 +26,19 @@ router.get('/', (req, res, next) => {
   },
 
 ]
-console.log(articles);
-//res.send(articles)
-res.render('articles/index', {articles} );
+
+  res.render('all', {articles} );
 });
 
 
-// NECESSARY (SOMEHOW?)
+// NECESSARY 
 router.get('/articles/new', (req, res, next) => {
-  res.render('articles/new')
+  res.render('new')
   })
   
+  router.get('/all', (req, res, next) => {
+    res.render('all')
+    })
   
 
 router.get('/about', (req, res, next) => {
