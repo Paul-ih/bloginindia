@@ -20,8 +20,8 @@ router.get('/', (req, res, next) => {
 
 ]
 console.log(articles);
-// res.send(articles)
-  res.render('articles/index', {articles} );
+//res.send(articles)
+res.render('articles/index', {articles} );
 });
 
 
