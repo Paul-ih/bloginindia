@@ -24,8 +24,10 @@ console.log(articles);
   res.render('articles/index', {articles} );
 });
 
-router.get('./articles/new', (req, res, next) => {
-  res.render('articles/new', {article: new Article()})
+
+// NECESSARY (SOMEHOW?)
+router.get('/articles/new', (req, res, next) => {
+  res.render('articles/new')
   })
   
   

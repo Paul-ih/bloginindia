@@ -25,7 +25,7 @@ try {
 article = await article.save
 res.redirect(`/articles/${article.id}`)
 } catch(err) {
-res.render('articles/new', {article : article})
+res.render('/articles/new'  )
 }
 })
 
