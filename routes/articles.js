@@ -2,9 +2,9 @@ const express = require('express')
 const router = express.Router()
 const Article = require('./../models/article.hbs')
 
-router.get('/new', (req, res, next) => {
-res.render('articles/new', {article: new Article()})
-})
+
+
+
 
 router.get('/:id', async (req, res, next) => {
     let article = await Article.findById(req.params.id)
