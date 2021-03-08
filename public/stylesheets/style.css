@@ -79,6 +79,18 @@ h1 {
 
 .btn-success:hover {
   color: #fff;
+  background-color: grey;
+  border-color: #grey
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: grey;
+  border-color: #grey
+}
+
+.btn-secondary:hover {
+  color: #fff;
   background-color: #157347;
   border-color: #146c43
 }
@@ -95,25 +107,86 @@ h1 {
   border-radius: .25rem
 }
 
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem
+}
+
+.card-title {
+  margin-bottom: .5rem
+}
+
+.card-subtitle {
+  margin-top: -.25rem;
+  margin-bottom: .5rem;
+  color: #6c757d;
+}
+
+.postimage {
+  margin-bottom: 0
+}
+
+.card-text:last-child {
+  margin-bottom: 0
+}
+
 .mt-4 {
   margin-top: 1.5rem;
 }
+
+.mb-2 {
+  margin-bottom: .5rem
+}
+
+
+
+
+.form-text {
+  margin-top: .25rem;
+  font-size: .875em;
+  color: #6c757d
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .form-control {
+      transition: none
+  }
+}
+
+
 
 footer {
   place-items: center;
   background: #9A031E;
   color: #E36414;
-  position: absolute;
+  /* position: absolute; */ 
   bottom: 0;
   width: 100%;
   padding-top: 50px;
   height: 50px;
 }
 
-footer a:link, 
+footer a:link,
 a:visited,
-a:hover
-{
+a:hover {
   color: #E36414;
   text-decoration: none;
 }
