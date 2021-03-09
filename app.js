@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const hbs = require("hbs");
 hbs.registerPartials(path.join(__dirname, "views/partials"));
 
-
+console.log("Hello people")
 // Mongoose Connect
 mongoose.connect("mongodb://localhost/bloginindia", {
   useNewUrlParser: true,
