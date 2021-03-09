@@ -4,9 +4,12 @@ const Article = require('../models/article')
 
 /* GET home page. */
 
-router.get("/", (req, res, next) => {
-  res.render("index");
+router.get("/", async (req, res, next) => {
+  const articles = await Article.find().sort({date: 'desc'})
+  res.render("index", { articles: articles });
 });
+
+
 
 router.get("/all", async (req, res, next) => {
   const articles = await Article.find().sort({date: 'desc'})
