@@ -1,22 +1,6 @@
+<h1>Create a new account</h1>
 
+<div class="form-container">
+{{! CHANGE THIS --> }} <form action="/articles" method="POST">
 
-{{!-- action represents the ROUTE you want to target --}}
-<div class="page-background">
-  <div class="form-container">
-
-<form method="post" action="/hackers/create" class="form">{{!-- CHANGE THIS LINE --}}
-    <label for="first-name">First name</label>
-    <input class="input" type="text" id="first-name" name="first-name" value="Your first name"><br>
-    <label for="name">Last name</label>
-    <input class="input" type="text" id="last-name" name="last-name" value="Your last name"><br>
-    <label for="email">Email Address</label>
-    <input id="email" class="input" type="email" name="email" value="email@domain.com"><br>
-    <label for="password">Password</label>
-    <input id="password" class="input" type="password" name="password" value="Secure123"><br>
-    <label for="password-repeat">Repeat Password</label>
-    <input id="password-repeat" class="input" type="password" name="password-repeat" value="Secure123"><br><br>
-    <button class="btn">Sign Up</button>
-</form>
-
-  </div>
-</div>
+{{> sign-up-form }}

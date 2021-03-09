@@ -4,6 +4,14 @@ const Article = require('../models/article')
 
 /* GET home page. */
 
+// NEW DELHI ARRAY
+// KOLKATA ARRAY
+// Use a filter array (see Benjamin's example from this morning)
+
+// router.get function
+
+
+
 router.get("/", async (req, res, next) => {
   const articles = await Article.find().sort({date: 'desc'})
   res.render("index", { articles: articles });
