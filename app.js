@@ -16,8 +16,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.json());  
+app.use(express.urlencoded({ extended: false })); 
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -27,9 +27,6 @@ app.use('/users', usersRouter);
 // Lets you access req.body !!
 app.use(express.urlencoded({ extended: false}))
 
-// Mongoose Connect
-// mongoose.connect('mongodb://localhost/bloginindia', 
-// { useNewUrlParser: true, useUnifiedTopology: true });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

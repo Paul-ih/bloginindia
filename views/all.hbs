@@ -15,7 +15,13 @@
            <div class="postimage">
             <p><img src="{{this.image}}" alt="This beautiful sight is from one of the most wonderful places in India."> </p>
            </div>
-           <div class="card-text"> <p>{{this.description}}</p></div>
+           <div class="card-text"> <p>{{this.markdown}}</p></div> 
+           <div> 
+               <a href="articles/{{article.id}}" class="btn btn-primary">Read more</a>
+               <form action="/articles/{{article.id}}?_method=DELETE" method="POST">
+               <button type="submit" class="btn btn-danger">Delete</button>
+               </form>
+           </div>
         </div>
     </div>
     {{/each}}
