@@ -6,9 +6,15 @@ const Article = require('../models/article')
 
 // NEW DELHI ARRAY
 // KOLKATA ARRAY
-// Use a filter array (see Benjamin's example from this morning)
 
 // router.get function
+
+// BENJAMIN'S CODE: 
+// function countDevelopers(list) {
+//   // your awesome code here :)
+//   return list.filter(dev => dev.continent === "Europe" && dev.language === "JavaScript").length
+// }
+
 
 
 
