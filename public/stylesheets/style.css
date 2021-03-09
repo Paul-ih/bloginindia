@@ -1,6 +1,7 @@
 body { 
     font-family: 'Poppins', sans-serif;
     margin: 5%;
+    color: #303030
     }
 
 #header-logo {
@@ -15,7 +16,7 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(86, 163, 168); 
+    color: #1951A8; 
 }
 
 a:hover {
@@ -70,6 +71,7 @@ a:hover {
     text-align: center;
     padding: 20px;
     font-weight: 600;
+    color: #C6963B;
 }
 
 .blog-post-snippet {
@@ -104,7 +106,7 @@ a:hover {
 /* Forms CSS */
 
 .page-background {
-    background-color: rgb(86, 163, 168);
+    background-color: #EBF6FF;
     padding: 40px;
     display: flex;
   }
@@ -126,5 +128,5 @@ a:hover {
   .footer-container {
     height: 30px;
     width: 100%;
-    background-color:rgb(86, 163, 168);
+    background-color: #EBF6FF;
   }

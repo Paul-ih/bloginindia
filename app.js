@@ -17,12 +17,7 @@ mongoose.connect("mongodb://localhost/bloginindia", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
-<<<<<<< HEAD
-});
-
-=======
 }).then(() => console.log("yay connected to the db")).catch(err => console.log(err))
->>>>>>> e38a8062608b92b8ccf58e0424445cea8b0a7b8d
 
 
 // view engine setup
