@@ -1,18 +1,16 @@
 body { 
     font-family: 'Poppins', sans-serif;
-    margin: 0px;
+    margin: 5%;
     }
 
 #header-logo {
     max-width: 250px;
-    margin: 30px 0px 0px 30px;
 }
 
 #nav-menu {
     text-decoration: none;
     display: flex;
     justify-content: flex-end;
-    margin-right: 30px;
 }
 
 a {
@@ -40,7 +38,6 @@ a:hover {
 .main-container {
     background-color: #ebf6ff;
     margin-top: 20px;
-    margin: 30px;
     padding: 30px;
     height: 700px;
     display: flex;
@@ -52,7 +49,7 @@ a:hover {
 .city-container {
     width: 300px;
     margin: 0px;
-    padding: 0px 20px 0px 0px;
+    padding: 0px 30px 0px 0px;
     display: flex;
     flex-direction: column;
 }
@@ -62,8 +59,13 @@ a:hover {
     background-color:#ebf6ff;
 }
 
+.spacer-white {
+    height: 40px;
+    background-color:#ffffff;
+}
+
 .city-title {
-    font-size: 26px;
+    font-size: 24px;
     text-align: center;
     padding: 20px;
     font-weight: 600;
@@ -76,22 +78,21 @@ a:hover {
 .post-photo {
     width: 300px;
     background-color:rgb(86, 163, 168);
-    margin: auto 0;
+    margin: 0px;
 }
 
 .post-title {
-    font-size: 22px;
-    margin: 0px;
-    padding: 0px 0px 0px 15px;
+    font-size: 18px;
+    padding: 10px 20px 10px 20px;
     background-color: #ffffff;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .post-description {
-    font-size: 16px;
+    font-size: 14px;
     margin: 0px;
-    padding: 10px 0px 10px 15px;
+    padding: 0px 20px 15px 20px;
     background-color: #ffffff;
     display: -webkit-box;
     /* -webkit-line-clamp: 2;
@@ -122,5 +123,7 @@ a:hover {
   /* FOOTER */
 
   .footer-container {
-    margin: 0px 40px 0px 40px;
+    height: 30px;
+    width: 100%;
+    background-color:rgb(86, 163, 168);
   }
