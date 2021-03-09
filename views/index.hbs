@@ -1,59 +1,65 @@
+{{! Do I need to add {{#each articles here? }}
+
 <div class="main-container">
     <section class="city-container">
-        <div class="city-title">New Delhi</div>
+        <div class="city-title"><a href="/cities/new-delhi">New Delhi</a></div>
             <div class="blog-post-snippet">
-                <img class="post-photo" src="images\new-delhi-lotus.jpg" alt="new-delhi-lotus"></img>
-                    <div class="post-title">Hiring a Local Guide</div>
-                        <p class="post-description">Hiring a guide isn’t something I normally do. But for my time in New Delhi...</p>
+                <img class="post-photo" src="{{this.image}}"></img>
+                    <div class="post-title">{{this.title}}</div>
+                        <p class="post-description">{{this.markdown}}</p>
             </div>
                 <div class="spacer"></div>
             <div class="blog-post-snippet">
-                <img class="post-photo" src="images\new-delhi-lotus.jpg" alt="new-delhi-lotus"></img>
-                    <div class="post-title">Hiring a Local Guide</div>
-                        <p class="post-description">Hiring a guide isn’t something I normally do. But for my time in New Delhi...</p>
+                <img class="post-photo" src="{{this.image}}"></img>
+                    <div class="post-title">{{this.title}}</div>
+                        <p class="post-description">{{this.markdown}}</p>
             </div> 
+            <a href="/cities/new-delhi">More New Delhi stories →</a>
     </section>
     <section class="city-container">
-        <div class="city-title">Kolkata</div>
+        <div class="city-title"><a href="/cities/kolkata">Kolkata</a></div>
             <div class="blog-post-snippet">
-                <img class="post-photo" src="images/kolkata-building-lake.jpg" alt="new-delhi-lotus"></img>
-                    <div class="post-title">Hiring a Local Guide</div>
-                        <p class="post-description">Hiring a guide isn’t something I normally do. But for my time in New Delhi...</p>
+                <img class="post-photo" src="{{this.image}}"></img>
+                    <div class="post-title">{{this.title}}</div>
+                        <p class="post-description">{{this.markdown}}</p>
             </div>
                 <div class="spacer"></div>
             <div class="blog-post-snippet">
-                <img class="post-photo" src="images/kolkata-building-lake.jpg" alt="new-delhi-lotus"></img>
-                    <div class="post-title">Hiring a Local Guide</div>
-                        <p class="post-description">Hiring a guide isn’t something I normally do. But for my time in New Delhi...</p>
+                <img class="post-photo" src="{{this.image}}"></img>
+                    <div class="post-title">{{this.title}}</div>
+                        <p class="post-description">{{this.markdown}}</p>
             </div>
+            <a href="/cities/kolkata">More Kolkata stories →</a>
     </section>
     <section class="city-container">
-        <div class="city-title">Karela</div>
+        <div class="city-title"><a href="/cities/kochi">Kochi</a></div>
             <div class="blog-post-snippet">
-                <img class="post-photo" src="images/kerala-tea-plantations.jpg" alt="new-delhi-lotus"></img>
-                    <div class="post-title">Hiring a Local Guide</div>
-                        <p class="post-description">Hiring a guide isn’t something I normally do. But for my time in New Delhi...</p>
+                <img class="post-photo" src="{{this.image}}"></img>
+                    <div class="post-title">{{this.title}}</div>
+                        <p class="post-description">{{this.markdown}}</p>
             </div>
                 <div class="spacer"></div>
             <div class="blog-post-snippet">
-                <img class="post-photo" src="images/kerala-tea-plantations.jpg" alt="new-delhi-lotus"></img>
-                    <div class="post-title">Hiring a Local Guide</div>
-                        <p class="post-description">Hiring a guide isn’t something I normally do. But for my time in New Delhi...</p>
+                <img class="post-photo" src="{{this.image}}"></img>
+                    <div class="post-title">{{this.title}}</div>
+                        <p class="post-description">{{this.markdown}}</p>
             </div> 
+            <a href="/cities/kochi">More Kochi stories →</a>
     </section>
     <section class="city-container">
-        <div class="city-title">Mumbai</div>
+        <div class="city-title"><a href="/cities/jaipur">Jaipur</a></div>
             <div class="blog-post-snippet">
-                <img class="post-photo" src="images/mumbai-water-boats.jpg" alt="new-delhi-lotus"></img>
-                    <div class="post-title">Bombay Cocktails</div>
-                        <p class="post-description">Who can travel to Bombay and not think about having a drink? Here are...</p>
+                <img class="post-photo" src="{{this.image}}"></img>
+                    <div class="post-title">{{this.title}}</div>
+                        <p class="post-description">{{this.markdown}}</p>
             </div>
                 <div class="spacer"></div>
             <div class="blog-post-snippet">
-                <img class="post-photo" src="images/mumbai-water-boats.jpg" alt="new-delhi-lotus"></img>
-                    <div class="post-title">Hiring a Local Guide</div>
-                        <p class="post-description">Hiring a guide isn’t something I normally do. But for my time in New Delhi...</p>
+                <img class="post-photo" src="{{this.image}}"></img>
+                    <div class="post-title">{{this.title}}</div>
+                        <p class="post-description">{{this.markdown}}</p>
             </div>
+            <a href="/cities/jaipur">More Jaipur stories →</a>
     </section>
 </div>
 <div class="spacer-white"></div>
