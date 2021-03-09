@@ -18,6 +18,12 @@ router.get("/articles/new", (req, res, next) => {
   res.render("new");
 });
 
+router.get("/articles/edit/:id", async (req, res, next) => {
+ const article = await Article.findById(req.params.id)
+ 
+  res.render("edit");
+});
+
 router.get("/all", (req, res, next) => {
   res.render("all");
 });

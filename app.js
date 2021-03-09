@@ -23,9 +23,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // PATHS
 app.use('/', indexRouter);
+
 app.use('/users', usersRouter);
-// Lets you access req.body !!
-app.use(express.urlencoded({ extended: false}))
+
+// Articles router 
+
+app.use('/articles', articleRouter)
+
 
 
 // catch 404 and forward to error handler
@@ -44,8 +48,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// Articles router 
-
-app.use('/articles', articleRouter)
 
 module.exports = app;

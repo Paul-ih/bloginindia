@@ -9,7 +9,8 @@
     <a href="/articles/edit/{{article.id}}" class="btn btn-info">Edit</a>
 
     <div>
-        {{article.markdown}}
+        {{!-- NOT MARKDOWN ANYMORE... --}}
+        {{article.sanitizedHtml}}
     </div>
 
 </div>
