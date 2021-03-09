@@ -20,12 +20,12 @@ a {
 }
 
 a:hover {
-    color: gray
+    color: #C6963B;
 
 }
 
 .nav-menu-button {
-    color:rgb(86, 163, 168);
+    color: #303030;
     list-style-type: none;
     text-decoration: none;
     width: 80px;
@@ -80,7 +80,7 @@ a:hover {
 
 .post-photo {
     width: 300px;
-    background-color:rgb(86, 163, 168);
+    background-color:#EBF6FF;
     margin: 0px;
 }
 
@@ -111,22 +111,43 @@ a:hover {
     display: flex;
   }
   
-  .form-container {
-    background-color: #ffffff;
-    display: flex;
-
-  }
-  
+   
   .confirmation-button {
       border: solid black; 
       text-align: center;
   }
 
 
+
+  /* FORMS PAGES */
+
+  .form-container {
+    background-color: #EBF6FF;
+    max-width: 100%;
+    padding: 100px 0px 100px 0px; 
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+      size: 14px;
+
+  }
+
+  input[type=text] {
+    width: 80%;
+    margin: 10px 5px;
+    box-sizing: border-box;
+  }
+
   /* FOOTER */
 
   .footer-container {
-    height: 30px;
+    height: 20px;
     width: 100%;
     background-color: #EBF6FF;
+    padding: 10px 0px 10px 10px;
+
   }
