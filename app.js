@@ -17,14 +17,7 @@ mongoose.connect("mongodb://localhost/bloginindia", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
-});
-
-
-
-router.get("/all", async (req, res, next) => {
-  const articles = await Article.find().sort({date: 'desc'})
-  res.render("all", { articles: articles });
-});
+}).then(() => console.log("yay connected to the db")).catch(err => console.log(err))
 
 
 // view engine setup
