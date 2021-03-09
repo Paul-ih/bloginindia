@@ -21,12 +21,6 @@ mongoose.connect("mongodb://localhost/bloginindia", {
 
 
 
-router.get("/all", async (req, res, next) => {
-  const articles = await Article.find().sort({date: 'desc'})
-  res.render("all", { articles: articles });
-});
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

@@ -35,13 +35,21 @@ console.log("I am in router..post");
 router.put("/:id", async (req, res, next) => {
   req.article = await Article.findById(req.params.id)
   next()
- },   saveArticleAndRedirect('edit') );
+ },
+ 
+ saveArticleAndRedirect('edit') );
 
-router.delete("/:id"),
-  async (req, res) => {
-    await Article.findByIdAndDelete(req.params.id);
-    res.redirect("/");
+router.delete("/articles/:id/delete"), async (req, res) => {
+  const { id } = req.params; 
+
+  await Article.findByIdAndDelete(id)
+  console.log("------------DELETE DEMAND -----------")
+  console.log(id)
+    .then (() => res.redirect('/all'))
+    .catch(err => next(err));
   };
+
+
 
 function saveArticleAndRedirect(path) {
   return async (req, res) => {
