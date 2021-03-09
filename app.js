@@ -11,6 +11,22 @@ const mongoose = require('mongoose');
 const hbs = require("hbs");
 hbs.registerPartials(path.join(__dirname, "views/partials"));
 
+
+// Mongoose Connect
+mongoose.connect("mongodb://localhost/bloginindia", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+});
+
+
+
+router.get("/all", async (req, res, next) => {
+  const articles = await Article.find().sort({date: 'desc'})
+  res.render("all", { articles: articles });
+});
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

@@ -4,12 +4,6 @@ const Article = require("../models/article.js");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 
-// Mongoose Connect
-mongoose.connect("mongodb://localhost/bloginindia", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
 
 router.get("/:slug", async (req, res, next) => {
 
