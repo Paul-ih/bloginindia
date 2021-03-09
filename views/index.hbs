@@ -1,8 +1,9 @@
 {{! Do I need to add {{#each articles here? }}
 
+{{#each articles}}
 <div class="main-container">
     <section class="city-container">
-        <div class="city-title"><a href="/cities/new-delhi">New Delhi</a></div>
+        <div class="city-title"><a href="/new-delhi">New Delhi</a></div>
             <div class="blog-post-snippet">
                 <img class="post-photo" src="{{this.image}}"></img>
                     <div class="post-title">{{this.title}}</div>
@@ -14,10 +15,10 @@
                     <div class="post-title">{{this.title}}</div>
                         <p class="post-description">{{this.markdown}}</p>
             </div> 
-            <a href="/cities/new-delhi">More New Delhi stories →</a>
+            <a href="/new-delhi">More New Delhi stories →</a>
     </section>
     <section class="city-container">
-        <div class="city-title"><a href="/cities/kolkata">Kolkata</a></div>
+        <div class="city-title"><a href="/kolkata">Kolkata</a></div>
             <div class="blog-post-snippet">
                 <img class="post-photo" src="{{this.image}}"></img>
                     <div class="post-title">{{this.title}}</div>
@@ -29,10 +30,10 @@
                     <div class="post-title">{{this.title}}</div>
                         <p class="post-description">{{this.markdown}}</p>
             </div>
-            <a href="/cities/kolkata">More Kolkata stories →</a>
+            <a href="/kolkata">More Kolkata stories →</a>
     </section>
     <section class="city-container">
-        <div class="city-title"><a href="/cities/kochi">Kochi</a></div>
+        <div class="city-title"><a href="/kochi">Kochi</a></div>
             <div class="blog-post-snippet">
                 <img class="post-photo" src="{{this.image}}"></img>
                     <div class="post-title">{{this.title}}</div>
@@ -44,10 +45,10 @@
                     <div class="post-title">{{this.title}}</div>
                         <p class="post-description">{{this.markdown}}</p>
             </div> 
-            <a href="/cities/kochi">More Kochi stories →</a>
+            <a href="/kochi">More Kochi stories →</a>
     </section>
     <section class="city-container">
-        <div class="city-title"><a href="/cities/jaipur">Jaipur</a></div>
+        <div class="city-title"><a href="/jaipur">Jaipur</a></div>
             <div class="blog-post-snippet">
                 <img class="post-photo" src="{{this.image}}"></img>
                     <div class="post-title">{{this.title}}</div>
@@ -59,7 +60,7 @@
                     <div class="post-title">{{this.title}}</div>
                         <p class="post-description">{{this.markdown}}</p>
             </div>
-            <a href="/cities/jaipur">More Jaipur stories →</a>
+            <a href="/jaipur">More Jaipur stories →</a>
     </section>
 </div>
 <div class="spacer-white"></div>
