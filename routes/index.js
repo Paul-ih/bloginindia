@@ -90,12 +90,17 @@ router.post('/articles/:id/edit', (req, res) => {
 
 // OTHER PAGES
 
-router.get("/all", (req, res, next) => {
-  res.render("all");
-});
+// router.get("/all", (req, res, next) => {
+//   res.render("all");
+// });
 
 router.get("/about", (req, res, next) => {
+  console.log("I'm in about route");
   res.render("about");
+});
+
+router.get("/sign-in", (req, res, next) => {  console.log("I'm in login route");
+  res.render("sign-in");
 });
 
 
