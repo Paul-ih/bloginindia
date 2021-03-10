@@ -6,11 +6,11 @@
         {{article.date}}
     </div>
 
-    <a href="/articles/edit/{{article.id}}" class="btn btn-info">Edit</a>
 
     <div>
-        {{!-- NOT MARKDOWN ANYMORE... --}}
-        {{article.sanitizedHtml}}
+        {{!-- NOT A REAL MARKDOWN ANYMORE... --}}
+        {{article.markdown}}
     </div>
 
+    <a href="/articles/{{article.id}}/edit" class="btn btn-info">Edit article</a>
 </div>
