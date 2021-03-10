@@ -60,19 +60,31 @@ router.get("/articles/new", (req, res, next) => {
 //   res.render("edit");
 // });
 
+// "/articles/{{article.id}}/edit"
+
 
 // EDIT SECOND VERSION
 router.get('/articles/:id/edit', (req, res) => {
-  console.log("I am in router.get edit");
+  console.log("I am in router.GET edit");
   const { id } =  req.params;
  
   Article.findById(id)
     .then(articleToEdit => {
       console.log(articleToEdit);
+      res.render("edit", {article: articleToEdit})
     })
     .catch(error => next(error));
 });
 
+router.post('/articles/:id/edit', (req, res) => {
+  console.log("I am in router.POST edit");
+  const { id } = req.params;
+  const { title, markdown, image, city } = req.body;
+ 
+  Article.findByIdAndUpdate(id, { title, markdown, image, city }, { new: true })
+    .then(updatedArticle => res.redirect(`/articles/${updatedArticle.id}`))
+    .catch(error => next(error));
+});
 
 
 
