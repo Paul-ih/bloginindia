@@ -6,7 +6,10 @@ const logger = require('morgan');
 const app = express();
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const articleRouter = require('./routes/articles')
+const paulRouter = require('./routes/about');
+const articleRouter = require('./routes/articles');
+// const indexRouter = require('./routes/index.routes');
+const authRouter = require('./routes/auth.routes');
 const mongoose = require('mongoose');
 const hbs = require("hbs");
 hbs.registerPartials(path.join(__dirname, "views/partials"));
@@ -24,21 +27,20 @@ mongoose.connect("mongodb://localhost/bloginindia", {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+
+// Routes middleware
 app.use(logger('dev'));
 app.use(express.json());  
 app.use(express.urlencoded({ extended: false })); 
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// PATHS
+
+// ROUTES
 app.use('/', indexRouter);
-
 app.use('/users', usersRouter);
-
-// Articles router 
-
-app.use('/articles', articleRouter)
-
+app.use('/articles', articleRouter);
+app.use('/paul', paulRouter)
 
 
 // catch 404 and forward to error handler

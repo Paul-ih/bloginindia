@@ -7,7 +7,7 @@ const methodOverride = require("method-override");
 
 
 
-
+//locqlhost:3000/qrticle/qnything
 router.get("/:slug", async (req, res, next) => {
 
   console.log("i am in router.get/slug");
@@ -28,7 +28,7 @@ router.get("/:slug", async (req, res, next) => {
 });
 
 // router.use(methodOverride("_method"));
-
+//localhost:3000/
 router.post("/", async (req, res, next) => {
  req.article = new Article()
  next()
@@ -43,7 +43,7 @@ console.log("I am in router.post");
 //  saveArticleAndRedirect('edit') );
 
 
-
+//locqlhost:3000/qrticle/pqul/delete
 router.post("/:id/delete", async (req, res) => {
   console.log("I'm in router.delete");
   const { id } = req.params; 
