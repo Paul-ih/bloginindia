@@ -5,6 +5,10 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 
 
+
+
+
+
 router.get("/:slug", async (req, res, next) => {
 
   console.log("i am in router.get/slug");
@@ -24,31 +28,33 @@ router.get("/:slug", async (req, res, next) => {
 
 });
 
-router.use(methodOverride("_method"));
+// router.use(methodOverride("_method"));
 
 router.post("/", async (req, res, next) => {
  req.article = new Article()
  next()
-console.log("I am in router..post");
+console.log("I am in router.post");
 },   saveArticleAndRedirect('new') );
 
-router.put("/:id", async (req, res, next) => {
-  req.article = await Article.findById(req.params.id)
-  next()
- },
- 
- saveArticleAndRedirect('edit') );
 
-router.delete("/articles/:id/delete"), async (req, res) => {
+// router.put("/:id", async (req, res, next) => {
+//   req.article = await Article.findById(req.params.id)
+//   next()
+//  },
+//  saveArticleAndRedirect('edit') );
+
+
+
+router.post("/:id/delete", async (req, res) => {
+  console.log("I'm in router.delete");
   const { id } = req.params; 
-
-  await Article.findByIdAndDelete(id)
   console.log("------------DELETE DEMAND -----------")
   console.log(id)
+  await Article.findByIdAndDelete(id)
     .then (() => res.redirect('/all'))
     .catch(err => next(err));
-  };
-
+  }
+);
 
 
 function saveArticleAndRedirect(path) {

@@ -18,6 +18,7 @@
            <div class="card-text"> <p>{{this.markdown}}</p></div> 
            <div> 
                <a href="articles/{{this.slug}}" class="btn btn-primary">Read more</a>
+               
                <form action="/articles/{{this.id}}/delete" method="POST">
                <button type="submit" class="btn btn-danger">Delete</button>
                </form>
