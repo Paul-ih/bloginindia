@@ -16,26 +16,26 @@ router.get("/", async (req, res, next) => {
 //   return list.filter(dev => dev.continent === "Europe" && dev.language === "JavaScript").length
 // }
 
-// CITY ROUTERS THAT AREN'T CURRENTLY WORKING 
+// CITY ROUTERS
 
 // New Delhi 
 router.get("new-delhi", (req, res, next) => {
-  res.render("new-delhi");
+  res.render("cities/new-delhi");
 });
 
 // Kolkata
 router.get("/kolkata", (req, res, next) => {
-  res.render("kolkata");
+  res.render("cities/kolkata");
 });
 
 // Kochi
 router.get("/kochi", (req, res, next) => {
-  res.render("kochi");
+  res.render("cities/kochi");
 });
 
 // Jaipur
 router.get("/jaipur", (req, res, next) => {
-  res.render("jaipur");
+  res.render("cities/jaipur");
 });
 
 
