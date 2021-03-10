@@ -1,13 +1,16 @@
 // routes/auth.routes.js
 
-const { Router } = require('express');
-const router = new Router();
-const bcryptjs = require('bcryptjs');
-const saltRounds = 10;
-const UserModel = require("../models/User.Model");
+const express = require("express");
+const router = new express.Router();
+// const bcryptjs = require("bcryptjs");
+// const saltRounds = 10;
+const UserModel = require("../models/User.model.js");
 
 // .get() route ==> to display the signup form to users
-router.get('/signup', (req, res) => res.render('signup'));
+router.get("/signup", (req, res) => {
+  console.log("I'm in get signup");
+  res.render("signup");
+});
 
 // .post() route ==> to process form data
 
@@ -25,18 +28,28 @@ router.get('/signup', (req, res) => res.render('signup'));
 //       .catch(error => next(error));
 //   });
 
-  router.post("/signup", async (req, res, next) => {
-    const newUser = { ...req.body };
-    //handle if there is a user already existing
-    try {
-      //handle the password
-      await UserModel.create(newUser);
-      res.redirect("/");
-    } catch (err) {
-      next(err);
-    }
-  });
+// router.get("/user", async (req, res, next) => {
+//   console.log("I'm in get user");
+//   const connectedUser = await UserModel.findOne();
+//   res.render("user", { connectedUser });
+// });
 
+router.get("/", async (req, res, next) => {
+  const articles = await Article.find().sort({ date: "desc" });
+  res.render("index", { articles: articles });
+});
 
+router.post("/signup", async (req, res, next) => {
+  const newUser = { ...req.body };
+  //handle if there is a user already existing
+  try {
+    await UserModel.create(newUser);
+    console.log("I'm in signup post");
+    console.log(newUser);
+    res.render("user", { newUser});
+  } catch (err) {
+    next(err);
+  }
+});
 
 module.exports = router;

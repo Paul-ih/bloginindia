@@ -10,6 +10,12 @@ router.get("/", async (req, res, next) => {
   res.render("index", { articles: articles });
 });
 
+router.get("/user", async (req, res, next) => {
+  console.log("I'm in get user");
+  const connectedUser = await UserModel.findOne();
+  res.render("user", { connectedUser });
+});
+
 // BENJAMIN'S CODE: 
 // function countDevelopers(list) {
 //   // your awesome code here :)

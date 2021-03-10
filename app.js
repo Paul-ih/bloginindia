@@ -38,10 +38,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // ROUTES
 app.use('/', indexRouter);
+app.use('/', authRouter);
 app.use('/users', usersRouter);
 app.use('/articles', articleRouter);
-app.use('/paul', paulRouter)
-
+app.use('/paul', paulRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
