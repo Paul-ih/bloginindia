@@ -90,8 +90,9 @@ router.get("/about", (req, res, next) => {
   res.render("about");
 });
 
-router.get("/signup", (req, res, next) => {  console.log("I'm in login route");
-  res.render("auth/signup");
+router.get("/signup", (req, res, next) => {  
+  console.log("I'm in login route");
+  res.render("signup");
 });
 
 

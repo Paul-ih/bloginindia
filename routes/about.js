@@ -1,10 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const about = require('./../models/about.hbs')
 
-router.get('/about', (req, res, next) => {
-    res.render('about')
-    })
+  router.get('/paul', (req, res, next) => {
+      res.send('paul')
+      })
 
 module.exports = router
 
