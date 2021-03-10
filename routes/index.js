@@ -10,11 +10,6 @@ router.get("/", async (req, res, next) => {
   res.render("index", { articles: articles });
 });
 
-// BENJAMIN'S CODE: 
-// function countDevelopers(list) {
-//   // your awesome code here :)
-//   return list.filter(dev => dev.continent === "Europe" && dev.language === "JavaScript").length
-// }
 
 // CITY ROUTERS
 
@@ -23,21 +18,26 @@ router.get("/new-delhi", (req, res, next) => {
   res.render("cities/new-delhi");
 });
 
+
 // Kolkata
 router.get("/kolkata", (req, res, next) => {
   res.render("cities/kolkata");
 });
+
+
 
 // Kochi
 router.get("/kochi", (req, res, next) => {
   res.render("cities/kochi");
 });
 
+
+
+
 // Jaipur
 router.get("/jaipur", (req, res, next) => {
   res.render("cities/jaipur");
 });
-
 
 
 router.get("/all", async (req, res, next) => {

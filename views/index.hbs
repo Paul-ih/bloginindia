@@ -2,7 +2,7 @@
 <div class="main-container">
     <section class="city-container">
         <div class="city-title"><a href="/new-delhi">New Delhi</a></div>
-{{#each articles}}
+{{#each articles: { city : "jaipur" }}}
             <div class="blog-post-snippet">
                 <img class="post-photo" src="{{this.image}}"></img>
                     <div class="post-title">{{this.title}}</div>
