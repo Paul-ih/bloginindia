@@ -53,15 +53,6 @@ router.get("/articles/new", (req, res, next) => {
 
 
 
-// EDIT FIRST VERSION (EMPTY)
- 
-// router.get("/articles/edit/:id", async (req, res, next) => {
-//   const article = await Article.findById(req.params.id);
-//   res.render("edit");
-// });
-
-// "/articles/{{article.id}}/edit"
-
 
 // EDIT SECOND VERSION
 router.get('/articles/:id/edit', (req, res) => {
@@ -99,8 +90,8 @@ router.get("/about", (req, res, next) => {
   res.render("about");
 });
 
-router.get("/sign-in", (req, res, next) => {  console.log("I'm in login route");
-  res.render("sign-in");
+router.get("/signup", (req, res, next) => {  console.log("I'm in login route");
+  res.render("auth/signup");
 });
 
 
