@@ -19,7 +19,7 @@ router.get("/", async (req, res, next) => {
 // CITY ROUTERS
 
 // New Delhi 
-router.get("new-delhi", (req, res, next) => {
+router.get("/new-delhi", (req, res, next) => {
   res.render("cities/new-delhi");
 });
 
