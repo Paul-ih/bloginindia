@@ -16,7 +16,7 @@ hbs.registerPartials(path.join(__dirname, "views/partials"));
 
 console.log("Hello people")
 // Mongoose Connect
-mongoose.connect("mongodb://localhost/bloginindia", {
+mongoose.connect("mongodb+srv://travel-india-user-mackenzie:A5W9M8vGcO3KRpL3@cluster0.uee3k.mongodb.net/bloginindia?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,

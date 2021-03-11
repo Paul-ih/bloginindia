@@ -30,13 +30,10 @@ router.get("/kolkata", (req, res, next) => {
 });
 
 
-
 // Kochi
 router.get("/kochi", (req, res, next) => {
   res.render("cities/kochi");
 });
-
-
 
 
 // Jaipur
