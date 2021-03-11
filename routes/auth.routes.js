@@ -6,12 +6,6 @@ const router = new express.Router();
 // const saltRounds = 10;
 const UserModel = require("../models/User.model.js");
 
-// .get() route ==> to display the signup form to users
-router.get("/signup", (req, res) => {
-  console.log("I'm in get signup");
-  res.render("signup");
-});
-
 // .post() route ==> to process form data
 
 // router.post('/signup', (req, res, next) => {
@@ -41,15 +35,42 @@ router.get("/", async (req, res, next) => {
 
 router.post("/signup", async (req, res, next) => {
   const newUser = { ...req.body };
-  //handle if there is a user already existing
-  try {
-    await UserModel.create(newUser);
-    console.log("I'm in signup post");
-    console.log(newUser);
-    res.render("user", { newUser});
-  } catch (err) {
-    next(err);
-  }
+  console.log("newUser :");
+  console.log(newUser);
+  console.log('SESSION =====> ', req.session);
+  UserModel.create(newUser)
+  .then(function (userDocument) {
+console.log("userDocument:");
+req.session.currentUser = userDocument;
+console.log(userDocument);
+res.redirect("/")
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
+});
+  
+//   //handle if there is a user already existing
+//   .then UserModel.create(newUser);
+//     console.log("I'm in signup post");
+//     console.log(newUser);
+//     currentUser = newUser;
+//     res.render("user", { newUser: newUser });
+//   } catch (err) {
+//     next(err);
+//   }
+// });
+
+
+
+
+
+router.post("/users/:id/delete", async (req, res) => {
+  console.log("I'm in user router.delete");
+  const { id } = req.params;
+  await UserModel.findByIdAndDelete(id)
+    .then(() => res.redirect("/"))
+    .catch((error) => next(error));
 });
 
 module.exports = router;

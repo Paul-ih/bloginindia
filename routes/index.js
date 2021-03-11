@@ -12,8 +12,8 @@ router.get("/", async (req, res, next) => {
 
 router.get("/user", async (req, res, next) => {
   console.log("I'm in get user");
-  const connectedUser = await UserModel.findOne();
-  res.render("user", { connectedUser });
+  // const connectedUser = await UserModel.findOne();
+  res.render("user");
 });
 
 // CITY ROUTERS
@@ -23,21 +23,15 @@ router.get("/new-delhi", (req, res, next) => {
   res.render("cities/new-delhi");
 });
 
-
 // Kolkata
 router.get("/kolkata", (req, res, next) => {
   res.render("cities/kolkata");
 });
 
-
-
 // Kochi
 router.get("/kochi", (req, res, next) => {
   res.render("cities/kochi");
 });
-
-
-
 
 // Jaipur
 router.get("/jaipur", (req, res, next) => {
@@ -55,9 +49,6 @@ router.get("/all", async (req, res, next) => {
 router.get("/articles/new", (req, res, next) => {
   res.render("new");
 });
-
-
-
 
 // EDIT SECOND VERSION
 router.get('/articles/:id/edit', (req, res) => {

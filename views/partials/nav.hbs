@@ -1,4 +1,14 @@
 <nav>
+
+{{#if isLoggedIn}}
+<h1>Hello you</h1>
+
+<h2>{{currentUser.userName}}</h2>
+
+{{/if}}
+
+
+
     <a href="/">
         <img id="header-logo" src="/images/travel-india-logo-gold.png" alt="travel-india-logo">
     </a>
