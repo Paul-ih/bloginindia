@@ -18,11 +18,11 @@ const authRouter = require("./routes/auth.routes");
 const mongoose = require("mongoose");
 const hbs = require("hbs");
 hbs.registerPartials(path.join(__dirname, "views/partials"));
-
+console.log("Hello world");
 console.log("Hello people");
 // Mongoose Connect
 mongoose
-  .connect(process.env.MONGO_URI, {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
@@ -52,9 +52,6 @@ app.use("/", authRouter);
 app.use("/users", usersRouter);
 app.use("/articles", articleRouter);
 app.use("/paul", paulRouter);
-
-
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
