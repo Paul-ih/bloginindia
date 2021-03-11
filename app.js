@@ -1,3 +1,4 @@
+require("dotenv").config()
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -16,7 +17,7 @@ hbs.registerPartials(path.join(__dirname, "views/partials"));
 
 console.log("Hello people")
 // Mongoose Connect
-mongoose.connect("mongodb+srv://travel-india-user-mackenzie:A5W9M8vGcO3KRpL3@cluster0.uee3k.mongodb.net/bloginindia?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGO_URI , {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
