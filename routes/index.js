@@ -19,8 +19,9 @@ router.get("/user", async (req, res, next) => {
 // CITY ROUTERS
 
 // New Delhi 
-router.get("/new-delhi", (req, res, next) => {
-  res.render("cities/new-delhi");
+router.get("/new-delhi", async (req, res, next) => {
+  const articles = await Article.find().sort({ date: "desc" });
+  res.render("cities/new-delhi", { articles: articles });
 });
 
 // Kolkata
