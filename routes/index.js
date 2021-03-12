@@ -6,7 +6,7 @@ const Article = require("../models/article");
 
 
 router.get("/", async (req, res, next) => {
-  const articles = await Article.find().sort({ date: "desc" });
+  let articles = await Article.find().sort({ date: "desc" });
   res.render("index", { articles: articles });
 });
 
@@ -20,7 +20,7 @@ router.get("/user", async (req, res, next) => {
 
 // New Delhi 
 router.get("/new-delhi", async (req, res, next) => {
-  const articles = await Article.find().sort({ date: "desc" });
+  let articles = await Article.find().sort({ date: "desc" });
   res.render("cities/new-delhi", { articles: articles });
 });
 
@@ -41,7 +41,7 @@ router.get("/jaipur", (req, res, next) => {
 
 
 router.get("/all", async (req, res, next) => {
-  const articles = await Article.find().sort({ date: "desc" });
+  let articles = await Article.find().sort({ date: "desc" });
   res.render("all", { articles: articles });
 });
 
