@@ -25,18 +25,21 @@ router.get("/new-delhi", async (req, res, next) => {
 });
 
 // Kolkata
-router.get("/kolkata", (req, res, next) => {
-  res.render("cities/kolkata");
+router.get("/kolkata", async (req, res, next) => {
+  let articles = await Article.find().sort({ date: "desc" });
+  res.render("cities/kolkata", { articles: articles });
 });
 
 // Kochi
-router.get("/kochi", (req, res, next) => {
-  res.render("cities/kochi");
+router.get("/kochi", async (req, res, next) => {
+  let articles = await Article.find().sort({ date: "desc" });
+  res.render("cities/kochi", { articles: articles });
 });
 
 // Jaipur
-router.get("/jaipur", (req, res, next) => {
-  res.render("cities/jaipur");
+router.get("/jaipur", async (req, res, next) => {
+  let articles = await Article.find().sort({ date: "desc" });
+  res.render("cities/jaipur", { articles: articles });
 });
 
 
