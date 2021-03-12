@@ -1,15 +1,6 @@
 require("dotenv").config();
 const createError = require("http-errors");
 const express = require("express");
-
-const path = require("path");
-const cookieParser = require("cookie-parser");
-const exposeLoginStatus = require("./Middlewares/exposeLoginStatus")
-const logger = require("morgan");
-const app = express();
-
-require('./config/session.config')(app);
-
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const paulRouter = require("./routes/about");
@@ -17,6 +8,22 @@ const articleRouter = require("./routes/articles");
 const authRouter = require("./routes/auth.routes");
 const mongoose = require("mongoose");
 const hbs = require("hbs");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const exposeLoginStatus = require("./Middlewares/exposeLoginStatus")
+const logger = require("morgan");
+const app = express();
+
+
+// Routes middleware
+app.use(logger("dev"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "public")));
+require('./config/session.config')(app);
+
+
 hbs.registerPartials(path.join(__dirname, "views/partials"));
 console.log("Hello world");
 console.log("Hello people");
@@ -39,12 +46,7 @@ app.use((req,res,next) => {
   next();
 })
 
-// Routes middleware
-app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+
 
 // ROUTES
 app.use("/", indexRouter);
