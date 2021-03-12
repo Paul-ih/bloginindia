@@ -20,25 +20,25 @@ router.get("/user", async (req, res, next) => {
 
 // New Delhi 
 router.get("/new-delhi", async (req, res, next) => {
-  let articles = await Article.find().sort({ date: "desc" });
+  let articles = await Article.find({ city: "newdelhi"});
   res.render("cities/new-delhi", { articles: articles });
 });
 
 // Kolkata
 router.get("/kolkata", async (req, res, next) => {
-  let articles = await Article.find().sort({ date: "desc" });
+  let articles = await Article.find({ city: "kolkata"});
   res.render("cities/kolkata", { articles: articles });
 });
 
 // Kochi
 router.get("/kochi", async (req, res, next) => {
-  let articles = await Article.find().sort({ date: "desc" });
+  let articles = await Article.find({ city: "kochi"});
   res.render("cities/kochi", { articles: articles });
 });
 
 // Jaipur
 router.get("/jaipur", async (req, res, next) => {
-  let articles = await Article.find().sort({ date: "desc" });
+  let articles = await Article.find({ city: "jaipur"});
   res.render("cities/jaipur", { articles: articles });
 });
 

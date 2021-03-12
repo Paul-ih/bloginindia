@@ -10,6 +10,7 @@
     {{#each articles}}
     <div class="card mt-4">
         <div class="card-body">
+            <div class="all-blogs-width-container">
             <h4 cass="card-title">
                 <p>{{this.title}}</p>
             </h4>
@@ -19,13 +20,14 @@
             <div class="postimage">
                 <p><img src="{{this.image}}"></p>
             </div>
-            <div class="all-blogs-width-container">
+            
             <div class="card-text">
                 <p>{{this.markdown}}</p>
             </div>
-            </div>
+            
             <div>
                 <a href="articles/{{this.slug}}" class="btn btn-primary">Read more</a>
+            </div>
 
 
                 {{#if isLoggedIn}}
