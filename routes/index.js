@@ -6,7 +6,9 @@ const Article = require("../models/article");
 
 
 router.get("/", async (req, res, next) => {
-  let articles = await Article.find().sort({ date: "desc" });
+  // TOOK THIS OUT BUT WAS WORKING: 
+  // let articles = await Article.find().sort({ date: "desc" });
+  let articles = await Article.find().limit(2);
   res.render("index", { articles: articles });
 });
 
