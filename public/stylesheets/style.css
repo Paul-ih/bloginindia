@@ -142,6 +142,13 @@ a:hover {
     box-sizing: border-box;
   }
 
+
+  /* ALL BLOGS PAGE */
+
+  .all-blogs-width-container {
+    max-width: 60%;
+  }
+
   /* FOOTER */
 
   .footer-container {
