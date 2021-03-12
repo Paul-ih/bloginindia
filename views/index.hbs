@@ -1,7 +1,7 @@
 <div class="main-container">
     <section class="city-container">
         <div class="city-title"><a href="/new-delhi">New Delhi</a></div>
-{{#each articles}}
+{{#each city:newdelhi}}
             <div class="blog-post-snippet">
                 <img class="post-photo" src="{{this.image}}"></img>
                     <div class="post-title">{{this.title}}</div>
@@ -24,7 +24,7 @@
 
     <section class="city-container">
         <div class="city-title"><a href="/kolkata">Kolkata</a></div>
-{{#each articles}}
+{{#each city:kolkata}}
             <div class="blog-post-snippet">
                 <img class="post-photo" src="{{this.image}}"></img>
                     <div class="post-title">{{this.title}}</div>
@@ -43,7 +43,7 @@
     </section>
     <section class="city-container">
         <div class="city-title"><a href="/kochi">Kochi</a></div>
-{{#each articles}}            
+{{#each city:kochi}}            
             <div class="blog-post-snippet">
                 <img class="post-photo" src="{{this.image}}"></img>
                     <div class="post-title">{{this.title}}</div>
@@ -63,7 +63,7 @@
     <section class="city-container">
         <div class="city-title"><a href="/jaipur">Jaipur</a></div>
             <div class="blog-post-snippet"> 
-{{#each articles}}
+{{#each city:jaipur}}
                 <img class="post-photo" src="{{this.image}}"></img>
                     <div class="post-title">{{this.title}}</div>
                         <p class="post-description">{{this.markdown}}</p>
