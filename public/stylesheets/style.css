@@ -103,6 +103,10 @@ a:hover {
     overflow: hidden; */
 }
 
+.post-image {
+    max-width: 60%;
+}
+
 /* Forms CSS */
 
 .page-background {
