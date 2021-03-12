@@ -1,14 +1,5 @@
 <nav>
 
-{{#if isLoggedIn}}
-<h1>Hello you</h1>
-
-<h2>{{currentUser.userName}}</h2>
-
-{{/if}}
-
-
-
     <a href="/">
         <img id="header-logo" src="/images/travel-india-logo-gold.png" alt="travel-india-logo">
     </a>
@@ -22,6 +13,7 @@
         <a class="nav-menu-button" href="/kochi">Kochi</a>
         <a class="nav-menu-button" href="/jaipur">Jaipur</a>
         <a class="nav-menu-button" href="/about">About</a>
-        <a class="nav-menu-button" href="/signup">Admin</a>
+        <a class="nav-menu-button" href="/signup">Admin{{#if isLoggedIn}}{{currentUser.userName}}{{/if}}</a>
+        
     </div>
 </nav>
