@@ -6,7 +6,9 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www -e .hbs,.js"
   },
-
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
