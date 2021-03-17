@@ -3,7 +3,6 @@ const createError = require("http-errors");
 const express = require("express");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
-const paulRouter = require("./routes/about");
 const articleRouter = require("./routes/articles");
 const authRouter = require("./routes/auth.routes");
 const mongoose = require("mongoose");
@@ -49,11 +48,10 @@ app.use((req,res,next) => {
 
 
 // ROUTES
-app.use("/", indexRouter);
-app.use("/", authRouter);
-app.use("/users", usersRouter);
-app.use("/articles", articleRouter);
-app.use("/paul", paulRouter);
+app.use("/", indexRouter); // toto.fr/
+app.use("/", authRouter); // toto.fr/
+app.use("/users", usersRouter); // toto.fr/users/
+app.use("/articles", articleRouter); // toto.fr/articles/
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
