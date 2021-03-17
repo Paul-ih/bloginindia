@@ -49,7 +49,9 @@ res.redirect("/")
     console.log(error);
   });
 });
-  
+
+
+
 //   //handle if there is a user already existing
 //   .then UserModel.create(newUser);
 //     console.log("I'm in signup post");
