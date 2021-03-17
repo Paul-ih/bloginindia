@@ -7,24 +7,27 @@
     <div class="card mt-4">
         <div class="card-body">
             <div class="blogs-width-container">
-            <h4 cass="card-title">
-                <p>{{this.title}}</p>
-            </h4>
-            <div class="card-subtitle text-muted">
-                <p>{{this.date}}</p>
+                <h4 cass="card-title">
+                    <p>{{this.title}}</p>
+                </h4>
+                <div class="card-subtitle text-muted">
+                    <p>{{this.date}}</p>
+                </div>
+                <div class="postimage">
+                    <p><img src="{{this.image}}"
+                            alt="This beautiful sight is from one of the most wonderful places in India."> </p>
+                </div>
+                <div class="card-text">
+                    <p>{{this.markdown}}</p>
+                </div>
+                <div>
+                    <a href="articles/{{this.slug}}" class="btn btn-primary">Read more</a>
+
+                    <form action="/articles/{{this.id}}/delete" method="POST">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
             </div>
-           <div class="postimage">
-            <p><img src="{{this.image}}" alt="This beautiful sight is from one of the most wonderful places in India."> </p>
-           </div>
-           <div class="card-text"> <p>{{this.markdown}}</p></div> 
-           <div> 
-               <a href="articles/{{this.slug}}" class="btn btn-primary">Read more</a>
-               
-               <form action="/articles/{{this.id}}/delete" method="POST">
-               <button type="submit" class="btn btn-danger">Delete</button>
-               </form>
-           </div>
-        </div>
         </div>
     </div>
     {{/each}}
