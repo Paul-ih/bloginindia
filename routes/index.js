@@ -12,14 +12,14 @@ const Article = require("../models/article");
 // });
 
 router.get("/", async (req, res, next) => {
-  let dehliArticles = await Article.find({ city: "newdelhi"});
+  let delhiArticles = await Article.find({ city: "newdelhi"});
   let kolkataArticles = await Article.find({ city: "kolkata"});
   let kochiArticles = await Article.find({ city: "kochi"});
   let jaipurArticles = await Article.find({ city: "jaipur"});
   // TOOK THIS OUT BUT WAS WORKING:
   // let articles = await Article.find().sort({ date: “desc” });
   let articles = await Article.find().limit(2);
-  res.render("index", { dehliArticles, kolkataArticles, kochiArticles, jaipurArticles  });
+  res.render("index", { delhiArticles, kolkataArticles, kochiArticles, jaipurArticles  });
 });
 
 
