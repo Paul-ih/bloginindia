@@ -37,20 +37,18 @@ router.post("/signup", async (req, res, next) => {
   const newUser = { ...req.body };
   console.log("newUser :");
   console.log(newUser);
-  console.log('SESSION =====> ', req.session);
+  console.log("SESSION =====> ", req.session);
   UserModel.create(newUser)
-  .then(function (userDocument) {
-console.log("userDocument:");
-req.session.currentUser = userDocument;
-console.log(userDocument);
-res.redirect("/")
-  })
-  .catch(function(error) {
-    console.log(error);
-  });
+    .then(function (userDocument) {
+      console.log("userDocument:");
+      req.session.currentUser = userDocument;
+      console.log(userDocument);
+      res.redirect("/");
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 });
-
-
 
 //   //handle if there is a user already existing
 //   .then UserModel.create(newUser);
@@ -62,10 +60,6 @@ res.redirect("/")
 //     next(err);
 //   }
 // });
-
-
-
-
 
 router.post("/users/:id/delete", async (req, res) => {
   console.log("I'm in user router.delete");

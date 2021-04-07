@@ -9,10 +9,9 @@ const mongoose = require("mongoose");
 const hbs = require("hbs");
 const path = require("path");
 const cookieParser = require("cookie-parser");
-const exposeLoginStatus = require("./Middlewares/exposeLoginStatus")
+const exposeLoginStatus = require("./Middlewares/exposeLoginStatus");
 const logger = require("morgan");
 const app = express();
-
 
 // Routes middleware
 app.use(logger("dev"));
@@ -20,12 +19,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
-require('./config/session.config')(app);
-
+require("./config/session.config")(app);
 
 hbs.registerPartials(path.join(__dirname, "views/partials"));
 console.log("Hello world");
 console.log("Hello people");
+
 // Mongoose Connect
 mongoose
   .connect(process.env.MONGODB_URI, {
@@ -40,12 +39,10 @@ mongoose
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 app.use(exposeLoginStatus);
-app.use((req,res,next) => {
-  console.log(req.session)
+app.use((req, res, next) => {
+  console.log(req.session);
   next();
-})
-
-
+});
 
 // ROUTES
 app.use("/", indexRouter); // toto.fr/
